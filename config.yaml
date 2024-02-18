@@ -1,0 +1,16 @@
+upstream: "https://httpbin.org"
+routes:
+- path: "/anything/:param1/foobar/:param2"
+  clear_cache:
+  - HEAD
+  - PUT
+  - PATCH
+  - POST
+  - DELETE
+- path: "/anything/:param1"
+  clear_cache:
+  - HEAD
+  - PUT
+  - PATCH
+  - POST
+  - DELETE
