@@ -18,12 +18,7 @@ A `HEAD` request against the route will clear the cache.
 Request methods defined in `clear_cache` will also clear it.  
 
 Example:
-1. `GET /anything/foobar`
-  - proxied and saved in memory
-1. `GET /anything/foobar`
-  - served from cache
-1. `POST /anything/foobar`
-  - proxied
-  - clears cache
-1. `GET /anything/foobar`
-  - proxied and saved in memory
+1. `GET /anything/foobar` -> proxied, saved in memory
+1. `GET /anything/foobar` -> served from cache
+1. `POST /anything/foobar` -> proxied, clears cache
+1. `GET /anything/foobar` -> proxied, saved in memory
